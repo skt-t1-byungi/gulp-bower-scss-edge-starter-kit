@@ -1,0 +1,24 @@
+.btn{
+  background: #00cd9f;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  height: 32px; line-height: 30px;
+  width: 70px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 16px;
+
+  &--lg{
+    font-size: 16px;
+    height: 38px; line-height: 36px;
+    border-radius: 18px;
+    width: 130px;
+  }
+
+  &:hover{
+    color: inherit;
+    transition: 0.2s background;
+    background: darken($color: #00cd9f, $amount: 2.5%)
+  }
+}

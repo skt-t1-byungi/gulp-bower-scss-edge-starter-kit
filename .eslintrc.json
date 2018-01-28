@@ -1,0 +1,10 @@
+{
+    "extends": "standard",
+    "globals": {
+      "$": true
+    },
+    "rules": {
+      "semi": ["error", "always"],
+      "semi-style": ["error", "last"]
+    }
+}

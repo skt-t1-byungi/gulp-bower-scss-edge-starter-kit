@@ -1,0 +1,79 @@
+.i18n-select{
+  display: inline-block;
+  color: #979797;
+  background: white;
+  text-align: center;
+  width: 70px;
+  height: 38px;
+  line-height: 36px; // -2px for vertical
+  border-radius: 18px;
+  position: relative;
+  cursor: pointer;
+
+  &__icon{
+    vertical-align: middle;
+
+    &--right-pad{
+      margin-right: 10px;
+    }
+  }
+
+  &__text{
+    overflow: hidden;
+
+    &::after{
+      display: inline-block;
+      content: "\25bc";
+      color: #adadad;
+      font-size: 8px;
+      font-family: sans-serif;
+      margin-left: 6px;
+    }
+
+    &--hidden{
+      display: none;
+    }
+  }
+
+  &__dropdown{
+    background: white;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px 0;
+
+    position: absolute;
+    top:0; right:0;
+
+    &--active{
+      animation: customselect-fadein-down 0.18s linear 1;
+    }
+    &--hidden{
+      display: none;
+    }
+  }
+
+  &__option{
+    height: 28px;
+    line-height: 24px; // -4px for vertical align
+    font-size: 16px;
+    text-align: left;
+    padding: 0 20px;
+
+    &:hover{
+      color: $color-txt-highlight;
+      background: #efefef;
+    }
+  }
+}
+
+@keyframes customselect-fadein-down {
+  from {
+     opacity: 0;
+     transform: translateY(-10px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}

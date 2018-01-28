@@ -1,0 +1,19 @@
+.i-sidebox-caution {
+  display: inline-block;
+  background: url(assets-img('sidebox-icons.png')) 0 0;
+  width: 30px;
+  height: 30px;
+}
+.i-sidebox-tip {
+  display: inline-block;
+  background: url(assets-img('sidebox-icons.png')) -30px 0px;
+  width: 30px;
+  height: 30px;
+}
+.i-sidebox-warn {
+  display: inline-block;
+  background-image: url(assets-img('sidebox-icons.png'));
+  background-position: 0px -30px;
+  width: 30px;
+  height: 30px;
+}

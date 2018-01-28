@@ -1,0 +1,21 @@
+.i-flag-jp {
+  display: inline-block;
+  background-image: url(assets-img('flags.png'));
+  background-position: 0px 0px;
+  width: 23px;
+  height: 17px;
+}
+.i-flag-kr {
+  display: inline-block;
+  background-image: url(assets-img('flags.png'));
+  background-position: -23px 0px;
+  width: 23px;
+  height: 17px;
+}
+.i-flag-us {
+  display: inline-block;
+  background-image: url(assets-img('flags.png'));
+  background-position: 0px -17px;
+  width: 23px;
+  height: 17px;
+}

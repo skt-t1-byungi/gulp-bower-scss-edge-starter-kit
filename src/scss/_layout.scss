@@ -1,0 +1,119 @@
+.layout{
+  padding: 0;
+  letter-spacing: -0.025em;
+
+  &__inner-width{
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.header{
+  background: linear-gradient(to right, $color-branding 65%, $color-branding-r);
+  color: white;
+  height: 65px;
+  line-height: 65px; // for vertical align (-2px to top)
+  margin-bottom: 60px;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+
+  &__main{
+    flex: 1;
+    position: relative; top: -7px;
+  }
+
+  &__logo{
+    background: url(assets-img('wol2-logo.png')) no-repeat;
+    display: inline-block;
+    width: 152px; height: 29px;
+    text-indent: -999px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 1.15em;
+    vertical-align: middle;
+    padding-left: 10px; margin-left: 8px;
+    border-left: 2px solid white;
+    line-height: 15px; // for text top position (14 + 1px)
+    height: 14px; //for boder height
+    display: inline-block;
+    position: relative; top: 5px;
+  }
+
+  &__i18n-select{
+    margin-right: 12px;
+  }
+
+  &__helpdesk-link{
+    width: 145px;
+  }
+}
+
+.body{
+  &__inner{
+    display: flex;
+  }
+
+  &__sidebar{
+    width: 220px;
+    margin-right: 40px;
+  }
+
+  &__content{
+    min-height: calc(100vh - (125px + 110px + 100px + 10px)); // (header+margin) + footer + (body margin + padding)
+    margin-bottom: 100px;
+    flex:1;
+    padding-top: 5px;
+    padding-left: 40px;
+    border-left: 1px solid #ccc;
+  }
+}
+
+.footer{
+  background: #efefef;
+  color: #2e2e2e;
+  height: 110px;
+  padding: 20px 0;
+  line-height: 1.65em;
+  font-size: 12px;
+  box-sizing: border-box;
+
+  &__links{
+    margin-bottom: 15px;
+  }
+
+  &__link{
+    display: inline-block;
+    height: 10px; line-height: 10px;
+    vertical-align: middle;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #2e2e2e;
+    color: #2e2e2e;
+    &:last-child{
+      border: none;
+    }
+  }
+
+  &__address{
+    font-size: 11px;
+  }
+
+  &__copyright{
+    margin: 0;
+  }
+
+  &__company-link{
+    background-image: url(assets-img('logo-gray-sm.png'));
+    display: inline-block;
+    width: 71px; height: 13px;
+    text-indent: -999px;
+    overflow: hidden;
+  }
+}

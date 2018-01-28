@@ -1,1 +1,17 @@
+@import "./_variable";
+@import "./_util";
 @import "./_common";
+@import "./_flags";
+@import "./_sidebox-icons";
+@import "./_btn";
+@import "./_custom-select";
+@import "./_layout";
+@import "./_sidebar";
+@import "./_main";
+
+.contents{
+  width: 1000px;
+  background: red;
+  height: 100px;
+  margin:0 auto;
+}
