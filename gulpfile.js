@@ -29,8 +29,12 @@ gulp.task('edge', () => {
     .src('./src/edge/**/!(_*).edge')
     .pipe($.plumber({errorHandler: onError}))
     .pipe($.if(shouldNewer, $.newer({dest: paths.DEV_HTML, ext: '.html'})))
-    .pipe($.edgejs({
-      assets_img: '/assets/image/'
+    .pipe($.edgejs(null, {
+      globals: {
+        echo_if (expr, str) {
+          return expr ? str : '';
+        }
+      }
     }))
     .pipe(gulp.dest(paths.DEV_HTML))
     .pipe($.browserSync.stream());

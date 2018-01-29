@@ -1,0 +1,35 @@
+@component('_layout', {pageId:'pds-resource'})
+  @slot('content')
+  <article class="article">
+    <h1 class="article__title">문서/프로그램 다운로드</h1>
+    <ol class="contents-table mb-30">
+      <li class="contents-table__item"><a class="contents-table__link" href="#section1">ダウンロード</a></li>
+      <li class="contents-table__item"><a class="contents-table__link" href="#section2">PCアプリケーション</a></li>
+    </ol>
+  </article>
+
+  <article class="article" id="section1">
+    <h1 class="article__title">1. ダウンロード</h1>
+    <p>遠隔地デバイスのスマート電源管理 RemoteWOLハードウェアの製品紹介や特徴、ご利用方法について</p>
+
+    <ul class="download-links">
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">RemoteWOL提案書</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">RemoteWOLチラシ</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">WOL設定ガイド（BIOS、LANカード)</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">サービスご利用マニュアル</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">WOLルータ設定ガイド</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">WOLルータ設定ガイド</a></li>
+    </ul>
+  </article>
+
+  <article class="article" id="section2">
+    <h1 class="article__title">2. PCアプリケーション</h1>
+    <p>안정된 RemoteWOL 서비스 이용을 위하여 아래 프로그램을 다운로드 받아 사용하십시오.
+      아래 프로그램을 다운로드 받아 사용하십시오.</p>
+    <ul class="download-links">
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">RemoteWOL プロキシ情報確認ツール</a></li>
+      <li class="download-links__link"><a class="download-btn download-links__btn" href="">RemoteWOL プロキシ情報確認ツール</a></li>
+    </ul>
+  </article>
+  @endslot
+@endcomponent

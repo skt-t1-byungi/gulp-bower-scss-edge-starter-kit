@@ -1,6 +1,10 @@
+@import "variable";
+@import "helper";
+
 .layout{
   padding: 0;
   letter-spacing: -0.025em;
+  min-width: 1000px;
 
   &__inner-width{
     width: 1000px;
@@ -41,7 +45,7 @@
     padding-left: 10px; margin-left: 8px;
     border-left: 2px solid white;
     line-height: 15px; // for text top position (14 + 1px)
-    height: 14px; //for boder height
+    height: 14px; //for border height
     display: inline-block;
     position: relative; top: 5px;
   }
@@ -68,10 +72,11 @@
   &__content{
     min-height: calc(100vh - (125px + 110px + 100px + 10px)); // (header+margin) + footer + (body margin + padding)
     margin-bottom: 100px;
-    flex:1;
-    padding-top: 5px;
+    flex:1 700px; width: 700px;
+    box-sizing: border-box;
     padding-left: 40px;
     border-left: 1px solid #ccc;
+    overflow: hidden;
   }
 }
 

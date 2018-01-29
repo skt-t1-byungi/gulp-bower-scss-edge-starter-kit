@@ -1444,16 +1444,16 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
 
 edge.js@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/edge.js/-/edge.js-1.1.3.tgz#c7f7b59e92b68067dd6b5a88f72927fe1964d5d1"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/edge.js/-/edge.js-1.1.4.tgz#6fac02b87a7476001da6e6f14d1df1daf487ce0d"
   dependencies:
     debug "^3.1.0"
-    encodeurl "^1.0.1"
+    encodeurl "^1.0.2"
     escape-html "^1.0.3"
     esprima "^4.0.0"
     indent-string "^3.2.0"
     lodash "^4.17.4"
-    node-exceptions "^2.0.2"
+    node-exceptions "^3.0.0"
     require-uncached "^1.0.3"
     upcast "^2.1.1"
 
@@ -1479,7 +1479,7 @@ emitter-steward@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/emitter-steward/-/emitter-steward-1.0.0.tgz#f3411ade9758a7565df848b2da0cbbd1b46cbd64"
 
-encodeurl@^1.0.1, encodeurl@~1.0.1:
+encodeurl@^1.0.2, encodeurl@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
 
@@ -2623,9 +2623,9 @@ gulp-decompress@^1.2.0:
     gulp-util "^3.0.1"
     readable-stream "^2.0.2"
 
-gulp-edgejs@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/gulp-edgejs/-/gulp-edgejs-0.0.4.tgz#1ab788e71300ff9adcda91dd270cd34f5fd1b37c"
+gulp-edgejs@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-edgejs/-/gulp-edgejs-0.1.0.tgz#0b03e3d2bf58481d475b4da1baccbab9c04fb4ff"
   dependencies:
     edge.js "^1.1.3"
     plugin-error "^1.0.0"
@@ -4220,9 +4220,9 @@ node-bitmap@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/node-bitmap/-/node-bitmap-0.0.1.tgz#180eac7003e0c707618ef31368f62f84b2a69091"
 
-node-exceptions@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/node-exceptions/-/node-exceptions-2.0.2.tgz#2612b45929b774e3669557f852b47507765acfe7"
+node-exceptions@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/node-exceptions/-/node-exceptions-3.0.0.tgz#48b8e10da71370845ef1af583778139527308d11"
 
 node-gyp@^3.3.1:
   version "3.6.2"
@@ -4759,8 +4759,8 @@ plugin-error@0.1.2, plugin-error@^0.1.2:
     extend-shallow "^1.1.2"
 
 plugin-error@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-1.0.0.tgz#37d66bd96ea334b7472584db149677ba2337724e"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"
   dependencies:
     ansi-colors "^1.0.1"
     arr-diff "^4.0.0"

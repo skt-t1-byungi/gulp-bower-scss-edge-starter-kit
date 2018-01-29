@@ -1,3 +1,6 @@
+@import "variable";
+@import "helper";
+
 .article{
   color: #4c4c4c;
   line-height: 2em;
@@ -13,7 +16,8 @@
     font-weight: 700;
     color: #404040;
     border-bottom: 1px solid #d8d8d8;
-    padding-bottom: 10px;
+    line-height: 1em;
+    padding-bottom: 12px;
     margin-bottom: 20px;
   }
 
@@ -22,6 +26,7 @@
     font-weight: 700;
     color: #404040;
     border-bottom: 1px solid #d8d8d8;
+    line-height: 1em;
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
@@ -58,5 +63,58 @@
     &::before{
       background-position: 0 -30px;
     }
+  }
+}
+
+.download-links{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link{
+    flex: 1 1;
+    flex-basis: calc(50% - 5px); // for ie
+    padding-bottom: 10px;
+
+    &:nth-child(odd){
+      padding-right: 5px;
+    }
+    &:nth-child(even){
+      padding-left: 5px;
+    }
+  }
+
+  &__btn{
+    width: 100%;
+  }
+}
+
+.download-btn{
+  $active: $color-txt-highlight;
+  color: $active;
+  border: 1px solid #d8d8d8;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 12px (15px + 20px) 12px 20px;
+  box-sizing: border-box;
+  background: white url(assets-img('download.png')) no-repeat;
+  background-position: calc(100% - 20px) center; // for ie
+  box-shadow: 1px 1px 1px #eee;
+
+
+  &:hover{
+    color: $active;
+    border-color: $active;
+    transition: 0.5s border;
+  }
+}
+
+.article-figure{
+  &__label{
+    font-weight: 800;
+    margin-right: 20px;
+  }
+
+  &__img{
+    max-width: 100%;
   }
 }

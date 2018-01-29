@@ -1,0 +1,124 @@
+@component('_layout', {pageId:'guid-2'})
+  @slot('content')
+    <article class="article">
+      <h1 class="article__title">WOL 장비에 접속하기 (DHCP 환경)</h1>
+      <ol class="contents-table mb-30">
+        <li class="contents-table__item"><a class="contents-table__link" href="#section1">WOL 장비 연결하기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section2">WOL 장비에 접속하기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section3">네트워크 환경 확인하기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section4">관리자 계정 입력하기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section5">입력한 정보 저장하기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section6">RemoteView에 WOL 장비 등록하기</a></li>
+      </ol>
+      <aside class="sidebox sidebox--tip">
+        네트워크가 고정IP환경인 경우, 4장 WOL 장비에 접속하기 (고정IP환경)을 확인하세요.
+      </aside>
+      <p>
+        초기 WOL 관리자 계정 설정과 네트워크 환경 등록을 위해 WOL 장비에 접속합니다.
+        추후 장비 리셋이나 펌웨어 업데이트 등의 작업이 필요한 경우에도 WOL 장비에 접속할 필요가 있습니다.
+      </p>
+    </article>
+
+    <article class="article" id="section1">
+      <h1 class="article__title">1. WOL 장비 연결하기</h1>
+      <ol class="mb-30">
+        <li>WOL 장비에 전원을 연결합니다.</li>
+        <li>동봉된 LAN케이블을 공유기(또는 허브)의 여분의 포트와 WOL 장비의 WAN 포트에 연결합니다.</li>
+      </ol>
+      <figure class="mb-30 article-figure">
+        <img class="article-figure__img" src="/assets/image/g2-01.jpg">
+      </figure>
+      <aside class="sidebox sidebox--caution">
+        반드시 LAN케이블을 WOL 장비의 SETTING이 아닌 WAN 포트에 연결하시기 바랍니다.
+      </aside>
+    </article>
+
+    <article class="article" id="section2">
+      <h1 class="article__title">2. WOL 장비에 접속하기</h1>
+      <p>
+        WOL 장비에 접속하기 위해서는 WOL 장비의 IP 주소를 알아야 합니다.
+        아래의 공란에 WOL 기기의 MAC 어드레스를 입력한 후 '검색' 버튼을 누릅니다.
+        검색결과가 표시되면 '접속'버튼을 눌러 WOL 장비에 접속합니다. (새 탭 또는 새창이 뜹니다)
+      </p>
+      <aside class="sidebox sidebox--caution">
+        <p class="mb-10">
+          장비 아래면에 붙어있는 스티커에 MAC 어드레스가 기재되어 있습니다.<br>
+          12자리의 숫자와 문자를 확인하여 입력하시기 바랍니다.
+        </p>
+        <figure class="article-figure">
+          <img class="article-figure__img" src="/assets/image/g2-03.jpg">
+        </figure>
+      </aside>
+    </article>
+
+    <article class="article" id="section3">
+      <h1 class="article__title">3. 네트워크 환경 확인하기</h1>
+      <figure class="article-figure">
+        <figcaption>
+          WOL 장비에 접속되어 새 창이 뜨면 WOL 장비명을 입력한 후, 네트워크 환경이 DHCP 상태인지 확인합니다.
+        </figcaption>
+        <img class="article-figure__img" src="/assets/image/g2-05.jpg">
+      </figure>
+    </article>
+
+    <article class="article" id="section4">
+      <h1 class="article__title">4. 관리자 계정 입력하기</h1>
+      <figure class="article-figure">
+        <figcaption>WOL 장비에 접근할 수 있는 계정을 설정합니다.</figcaption>
+        <img class="article-figure__img" src="/assets/image/g2-06.jpg">
+      </figure>
+    </article>
+
+    <article class="article" id="section5">
+      <h1 class="article__title">5. 관리자 계정 입력하기</h1>
+      <figure class="article-figure">
+        <figcaption>'다음으로' 버튼을 클릭하여 입력한 정보를 확인한 후 기기에 환경을 저장합니다.</figcaption>
+        <img class="article-figure__img" src="/assets/image/g2-07.jpg">
+      </figure>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g2-08.jpg">
+      </figure>
+    </article>
+
+    <article class="article" id="section6">
+      <section class="mb-50">
+        <h1 class="article__title">6. 관리자 계정 입력하기</h1>
+        <p>
+          Remoteview를 이용하면 원활한 WOL 서비스를 이용할 수 있습니다.<br>
+          WOL 관리자 계정으로 로그인하여 보유하고 계신 remoteview 계정을 입력합니다.
+        </p>
+      </section>
+
+      <section class="mb-50">
+        <h2 class="article__subtitle">6.1 WOL 장비에 로그인</h2>
+        <figure class="article-figure">
+          <figcaption>설정한 관리자 계정으로 장비에 로그인합니다.</figcaption>
+          <img class="article-figure__img" src="/assets/image/g2-09.jpg">
+        </figure>
+      </section>
+
+      <section class="mb-50">
+        <h2 class="article__subtitle">6.2 remoteview 서비스에 로그인</h2>
+        <figure class="article-figure">
+          <figcaption>
+            초기화면의 '리모트뷰 설정'을 클릭한 후 'Agent 등록' 버튼을 누르고
+            remoteview 계정을 입력하여 remoteview 서비스에 로그인합니다.
+          </figcaption>
+          <img class="article-figure__img" src="/assets/image/g2-10.jpg">
+        </figure>
+      </section>
+
+      <section>
+        <h2 class="article__subtitle">6.3 remoteview 에이전트 등록</h2>
+        <figure class="article-figure">
+          <figcaption>remoteview에서 WOL 서비스를 사용하기 위해서 WOL 기기를 에이전트로 등록합니다.</figcaption>
+          <img class="article-figure__img" src="/assets/image/g2-11.jpg">
+        </figure>
+        <figure class="article-figure">
+          <figcaption>등록이 완료되면 등록정보가 표시됩니다.</figcaption>
+          <img class="article-figure__img" src="/assets/image/g2-12.jpg">
+        </figure>
+      </section>
+    </article>
+  @endslot
+@endcomponent

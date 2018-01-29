@@ -100,6 +100,8 @@
         $dropdown.addClass(option.activeDropdownClass).removeClass(option.inactiveDropdownClass);
       }
     });
+
+    return this;
   };
 
   function createSelectEl (name, values) {

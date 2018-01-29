@@ -1,21 +1,20 @@
+@import "helper";
+
 .i-flag-jp {
   display: inline-block;
-  background-image: url(assets-img('flags.png'));
-  background-position: 0px 0px;
+  background: url(assets-img('flags.png')) 0 0;
   width: 23px;
   height: 17px;
 }
 .i-flag-kr {
   display: inline-block;
-  background-image: url(assets-img('flags.png'));
-  background-position: -23px 0px;
+  background: url(assets-img('flags.png')) -23px 0;
   width: 23px;
   height: 17px;
 }
 .i-flag-us {
   display: inline-block;
-  background-image: url(assets-img('flags.png'));
-  background-position: 0px -17px;
+  background: url(assets-img('flags.png')) 0 -17px;
   width: 23px;
   height: 17px;
 }

@@ -20,7 +20,7 @@
     "gulp-bump": "^2.8.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
-    "gulp-edgejs": "^0.0.4",
+    "gulp-edgejs": "^0.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.4.0",
     "gulp-jsbeautifier": "^2.1.1",

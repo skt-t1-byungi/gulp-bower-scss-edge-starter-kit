@@ -6,13 +6,12 @@
 html, body{
   font-family: meiryo, 'Nanum Gothic', 'dotum', sans-serif;
   font-size: $font-default-size;
-  height: 100%;
+  text-size-adjust: none;
 }
 
 a{
   text-decoration: none;
   color: $color-txt-highlight;
-
   &:hover{
     color: #3d79e6;
     transition: 0.3s color;
@@ -22,19 +21,17 @@ a{
 ol{
   list-style: decimal inside;
 }
-
 p{
   margin-bottom: 30px;
 }
 
 figure{
-  text-align: center;
 }
 
 strong{
   font-weight: 900;
 }
 
-@function assets-img($path){
-  @return '/assets/image/' + $path
+[hidden]{
+  display: none!important;
 }

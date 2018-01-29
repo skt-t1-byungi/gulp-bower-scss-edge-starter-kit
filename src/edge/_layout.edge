@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1050">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RemoteWOL 2</title>
   <link href="/assets/css/vendor.css"  rel="stylesheet" />
@@ -21,7 +21,7 @@
         <span class="header__title">Guide</span>
       </h1>
 
-      <div class="i18n-select header__i18n-select" data-custom-name="locale">
+      <div class="i18n-select header__i18n-select" data-custom-name="locale" hidden>
         <div>
           <span class="i18n-select__text" data-custom-text="ko"><i class="i-flag-kr i18n-select__icon"></i></span>
           <span class="i18n-select__text" data-custom-text="ja"><i class="i-flag-jp i18n-select__icon"></i></span>
@@ -54,8 +54,7 @@
 
       <!-- main -->
       <main class="body__content">
-        @section('content')
-        @endsection
+        {{{ $slot.content }}}
       </main>
       <!-- /main -->
     </div>
@@ -80,9 +79,10 @@
     </div>
   </footer>
   <!-- /footer -->
-  @section('scripts')
-    <script src="/assets/script/app.js"></script>
-  @endsection
+  <script src="/assets/script/app.js"></script>
+  @if($slot.scripts)
+    {{{ $slot.scripts }}}
+  @endif
 </body>
 
 </html>

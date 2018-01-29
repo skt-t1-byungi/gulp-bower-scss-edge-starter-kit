@@ -1,169 +1,170 @@
-@layout('_layout')
+@component('_layout', {pageId:'guid-1'})
+  @slot('content')
+  <article class="article">
+    <h1 class="article__title">WOL 동작 환경 확인</h1>
+    <p>
+      RemoteWOL 기능을 이용해 꺼져있는 PC, 서버의 전원을 원격으로 켤 수 있습니다.
+      본 사이트에서는 RemoteWol 기능을 사용하는데 필요한 환경 및 설정 방법에 대해 설명합니다.
+    </p>
+    <ol class="contents-table mb-30">
+      <li class="contents-table__item"><a class="contents-table__link" href="#section1">유선 네트워크 확인</a></li>
+      <li class="contents-table__item"><a class="contents-table__link" href="#section2">메인보드에서 WOL 기능 확인</a></li>
+      <li class="contents-table__item"><a class="contents-table__link" href="#section3">네트워크 카드 설정</a></li>
+      <li class="contents-table__item"><a class="contents-table__link" href="#section4">PC2의 MAC 주소 확인</a></li>
+      <li class="contents-table__item"><a class="contents-table__link" href="#section5">PC2가 켜지는지 테스트하기</a></li>
+    </ol>
+    <p>
+      WOL이 가능한 환경을 만들고 WOL 기능을 사용할 수 있는지 테스트합니다.<br>
+      테스트를 위해서 동일한 네트워크에 있는 PC가 두 대(WOL 신호를 보낼 PC와 WOL 대상 PC)가 필요합니다.<br>
+      <strong>PC1 : WOL 신호를 보낼 PC<br>
+      PC2 : 전원을 켤 PC</strong>
+    </p>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-01.jpg">
+    </figure>
+    <aside class="sidebox sidebox--caution">
+      WOL 기술을 적용하기 위해서 아래의 환경을 확인합니다.
+      <ul class="list-style-vbar">
+        <li>PC1과 PC2는 동일한 네트워크에 있어야 함</li>
+        <li>PC2의 메인보드가 WOL을 지원해야 함</li>
+        <li>PC2의 유선 네트워크 카드가 WOL을 지원해야 함</li>
+        <li>PC2에 전원이 연결되어 있어야 함</li>
+        <li>PC2는 유선 네트워크 케이블로 인터넷에 연결되어 있어야 함</li>
+        <li>PC2는 '시스템 종료' 또는 '절전' 상태에 있어야 함</li>
+      </ul>
+    </aside>
+  </article>
 
-@section('content')
-<article class="article">
-  <h1 class="article__title">WOL 동작 환경 확인</h1>
-  <p>
-    RemoteWOL 기능을 이용해 꺼져있는 PC, 서버의 전원을 원격으로 켤 수 있습니다.
-    본 사이트에서는 RemoteWol 기능을 사용하는데 필요한 환경 및 설정 방법에 대해 설명합니다.
-  </p>
-  <ol class="contents-table mb-30">
-    <li class="contents-table__item"><a class="contents-table__link" href="#sec1">유선 네트워크 확인</a></li>
-    <li class="contents-table__item"><a class="contents-table__link" href="#sec2">메인보드에서 WOL 기능 확인</a></li>
-    <li class="contents-table__item"><a class="contents-table__link" href="#sec3">네트워크 카드 설정</a></li>
-    <li class="contents-table__item"><a class="contents-table__link" href="#sec4">PC2의 MAC 주소 확인</a></li>
-    <li class="contents-table__item"><a class="contents-table__link" href="#sec5">PC2가 켜지는지 테스트하기</a></li>
-  </ol>
-  <p>
-    WOL이 가능한 환경을 만들고 WOL 기능을 사용할 수 있는지 테스트합니다.<br>
-    테스트를 위해서 동일한 네트워크에 있는 PC가 두 대(WOL 신호를 보낼 PC와 WOL 대상 PC)가 필요합니다.<br>
-    <strong>PC1 : WOL 신호를 보낼 PC<br>
-    PC2 : 전원을 켤 PC</strong>
-  </p>
-  <figure>
-    <img src="{{ assets_img + "g1-01.jpg" }}">
-  </figure>
-  <aside class="sidebox sidebox--caution">
-    WOL 기술을 적용하기 위해서 아래의 환경을 확인합니다.
-    <ul class="list-style-vbar">
-      <li>PC1과 PC2는 동일한 네트워크에 있어야 함</li>
-      <li>PC2의 메인보드가 WOL을 지원해야 함</li>
-      <li>PC2의 유선 네트워크 카드가 WOL을 지원해야 함</li>
-      <li>PC2에 전원이 연결되어 있어야 함</li>
-      <li>PC2는 유선 네트워크 케이블로 인터넷에 연결되어 있어야 함</li>
-      <li>PC2는 '시스템 종료' 또는 '절전' 상태에 있어야 함</li>
-    </ul>
-  </aside>
-</article>
+  <article class="article" id="section1">
+    <h1 class="article__title">1. 유선 네트워크 확인</h1>
+    <p>PC2가 유선 네트워크 케이블로 인터넷에 연결되어 있는 지 확인합니다.</p>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-02.jpg">
+    </figure>
+  </article>
 
-<article class="article" id="sec1">
-  <h1 class="article__title">1. 유선 네트워크 확인</h1>
-  <p>PC2가 유선 네트워크 케이블로 인터넷에 연결되어 있는 지 확인합니다.</p>
-  <figure>
-    <img src="{{ assets_img + "g1-02.jpg" }}">
-  </figure>
-</article>
+  <article class="article" id="section2">
+    <h1 class="article__title">2. 메인보드에서 WOL 기능 확인</h1>
+    <p>PC2의 메인보드에서 WOL 기능여부를 확인하고 설정합니다.</p>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-03.jpg">
+    </figure>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-04.jpg">
+    </figure>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-05.jpg">
+    </figure>
+    <figure class="mb-30">
+      <img class="article-figure__img" src="/assets/image/g1-06.jpg">
+    </figure>
+    <ol class="mb-30">
+      <li>PC2의 전원을 켜고 즉시 메인보드 설정 모드로 진입합니다. (제조사에 따라 설정모드로 진입하는 키가 F2키 또는 Del 키 등으로 다르니 제조사에 문의하시기 바랍니다)</li>
+      <li>설정 모드의 메뉴 중 전원관리 메뉴를 선택하여 WOL 기능을 활성화 시킵니다.</li>
+      <li>설정을 저장하고 재부팅합니다.</li>
+    </ol>
+    <figure class="mb-30 article-figure">
+      <!-- @todo 스타일적용 필요 -->
+      <figcaption><span class="article-figure__label">그림 1-1</span>메인보드의 전원관리 메뉴와 WOL 기능 활성화 예시</figcaption>
+      <img class="article-figure__img" src="/assets/image/g1-07.jpg">
+    </figure>
+    <figure class="article-figure">
+      <iframe width="710" height="400" src="https://www.youtube.com/embed/1mqruSq8XBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </figure>
+  </article>
 
-<article class="article" id="sec2">
-  <h1 class="article__title">2. 메인보드에서 WOL 기능 확인</h1>
-  <p>PC2의 메인보드에서 WOL 기능여부를 확인하고 설정합니다.</p>
-  <figure>
-    <img src="{{ assets_img + "g1-03.jpg" }}">
-  </figure>
-  <figure>
-    <img src="{{ assets_img + "g1-04.jpg" }}">
-  </figure>
-  <figure>
-    <img src="{{ assets_img + "g1-05.jpg" }}">
-  </figure>
-  <figure class="mb-30">
-    <img src="{{ assets_img + "g1-06.jpg" }}">
-  </figure>
-  <ol class="mb-30">
-    <li>PC2의 전원을 켜고 즉시 메인보드 설정 모드로 진입합니다. (제조사에 따라 설정모드로 진입하는 키가 F2키 또는 Del 키 등으로 다르니 제조사에 문의하시기 바랍니다)</li>
-    <li>설정 모드의 메뉴 중 전원관리 메뉴를 선택하여 WOL 기능을 활성화 시킵니다.</li>
-    <li>설정을 저장하고 재부팅합니다.</li>
-  </ol>
-  <figure class="mb-30">
-    <!-- @todo 스타일적용 필요 -->
-    <figcaption><span>그림 1-1</span>메인보드의 전원관리 메뉴와 WOL 기능 활성화 예시</figcaption>
-    <img src="{{ assets_img + "g1-07.jpg" }}">
-  </figure>
-  <figure>
-    <iframe width="710" height="400" src="https://www.youtube.com/embed/1mqruSq8XBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </figure>
-</article>
+  <article class="article" id="section3">
+    <section class="mb-50">
+      <h1 class="article__title">3. 네트워크 카드 설정</h1>
+      <p>PC2 윈도우의 네트워크 카드 설정에서 WOL 기능 여부를 확인하고 활성화시킵니다.</p>
+      <aside class="sidebox sidebox-caution">
+        이 설정을 위해서는 관리자 권한이 필요합니다. 그리고 윈도우의 버전이나 네트워크 어댑터의 제조사에 따라 설정이 다를 수 있습니다.
+      </aside>
+    </section>
 
-<article class="article" id="sec3">
-  <section>
-  <h1 class="article__title">3. 네트워크 카드 설정</h1>
-  <p>PC2 윈도우의 네트워크 카드 설정에서 WOL 기능 여부를 확인하고 활성화시킵니다.</p>
-  <aside class="sidebox sidebox-caution">
-    이 설정을 위해서는 관리자 권한이 필요합니다. 그리고 윈도우의 버전이나 네트워크 어댑터의 제조사에 따라 설정이 다를 수 있습니다.
-  </aside>
+    <section class="mb-50">
+      <h2 class="article__subtitle">3.1 장치관리자 열기</h2>
+      <p>PC2 윈도우의 네트워크 카드 설정에서 WOL 기능 여부를 확인하고 활성화시킵니다.</p>
+      <ol class="mb-30">
+        <li>윈도우키 + R 키를 누릅니다.</li>
+        <li>실행창에 devmgmt.msc 를 입력하고 확인키를 누릅니다</li>
+        <li>장치관리자가 실행됩니다</li>
+      </ol>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g1-08.jpg">
+      </figure>
+    </section>
 
-  <section class="mb-30">
-    <h2 class="article__subtitle">3.1 장치관리자 열기</h2>
-    <p>PC2 윈도우의 네트워크 카드 설정에서 WOL 기능 여부를 확인하고 활성화시킵니다.</p>
+    <section class="mb-50">
+      <h2 class="article__subtitle">3.2 네트워크 어댑터 속성에서 WOL 기능 여부 확인 및 활성화시키기</h2>
+      <p>네트워크 어댑터 목록 중에서 유선 네트워크 어댑터를 찾아 더블클릭합니다.</p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g1-09.jpg">
+      </figure>
+      <aside class="sidebox sidebox-caution">
+        <h3 class="font-bold">유선 네트워크 카드의 명칭 확인 방법</h3>
+        <ol>
+          <li>윈도우키 + R 키를 누릅니다.</li>
+          <li>실행창에 CMD 를 입력하고 확인키를 눌러 명령 프롬프트를 실행시킵니다.</li>
+          <li>프롬프트상에서 ipconfig /all 을 입력합니다</li>
+          <li><strong>이더넷 어댑터</strong>의 설명에 표시되는 유선 네트워크 카드의 명칭을 확인합니다.</li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="mb-50">
+      <h2 class="article__subtitle">3.3 장치관리자 열기</h2>
+      <p>
+        속성창의 '고급'탭을 클릭하고 속성의 WOL 항목이 활성화(Enabled) 인지 확인합니다.
+        (제조사에 따라 설정항목이 다르니 상세한 사항은 제조사에 문의하시기 바랍니다.)
+      </p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g1-10.jpg">
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="article__subtitle">3.4 전원 관리 활성화</h2>
+      <p>PC가 절전 또는 휴면 모드에서 깨어나게 하기 위해서는 아래의 항목을 체크합니다.</p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g1-11.jpg">
+      </figure>
+      <aside class="sidebox sidebox-caution">
+        윈도우8 이후의 전원 설정에서 "빠른 시작"이 활성화되어 있으면 윈도우 전원이 완전히 꺼지지 않아 WOL 기능을 사용할 수 없는 경우가 있습니다. "빠른 시작" 기능을 해제하시기 바랍니다.<br>
+        <a target="_blank" href="https://support.microsoft.com/ko-kr/help/2776718/-wake-on-lan-wol-behavior-in-windows-8--windows-8-1-and-windows-10">https://support.microsoft.com/ko-kr/help/2776718/-wake-on-lan-wol-behavior-in-windows-8--windows-8-1-and-windows-1011114</a>
+      </aside>
+      <aside class="sidebox sidebox-caution">
+        윈도우10의 경우, 기본 설치된 네트워크 어댑터 드라이버가 WOL 기능을 지원하지 않는 경우가 있습니다. 제조사의 최신 드라이버를 설치한 후 WOL 기능 여부를 확인하시기 바랍니다.
+      </aside>
+    </section>
+  </article>
+
+  <article class="article" id="section4">
+    <h1 class="article__title">4. PC2의 MAC 주소 확인</h1>
+    <p>동일한 네트워크에 연결된 다수의 PC 중에서 특정한 PC의 전원을 켜기 위해서는 그 PC의 고유 주소(MAC 주소)를 알아야 합니다.</p>
     <ol class="mb-30">
       <li>윈도우키 + R 키를 누릅니다.</li>
-      <li>실행창에 devmgmt.msc 를 입력하고 확인키를 누릅니다</li>
-      <li>장치관리자가 실행됩니다</li>
+      <li>실행창에 CMD 를 입력하고 확인키를 눌러 명령 프롬프트를 실행시킵니다.</li>
+      <li>프롬프트상에서 ipconfig /all 을 입력합니다</li>
+      <li>이더넷 어댑터의 물리적 주소를 확인하고 메모합니다.</li>
+      <li>PC를 종료(또는 절전모드로 변경)하여 테스트 준비를 합니다.</li>
     </ol>
-    <figure>
-      <img src="{{ assets_img + "g1-08.jpg" }}">
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-12.jpg">
     </figure>
-  </section>
+  </article>
 
-  <section class="mb-30">
-    <h2 class="article__subtitle">3.2 네트워크 어댑터 속성에서 WOL 기능 여부 확인 및 활성화시키기</h2>
-    <p>네트워크 어댑터 목록 중에서 유선 네트워크 어댑터를 찾아 더블클릭합니다.</p>
-    <figure>
-      <img src="{{ assets_img + "g1-09.jpg" }}">
+  <article class="article" id="section5">
+    <h1 class="article__title">5. PC2가 켜지는지 테스트하기</h1>
+    <p>WOL 기능 테스트 프로그램을 이용하여 PC2가 켜지는지 테스트합니다.</p>
+    <ol class="mb-30">
+      <li>PC1에서 <a target="_blank" href="/contents/files/WOLCheckTool.exe">WOL 기능 테스트 프로그램</a>을 다운받고 실행시킵니다.</li>
+      <li>메모해 둔 <strong>PC2의 MAC 주소</strong>를 입력합니다.</li>
+      <li><strong>전원 켜기 테스트</strong> 버튼을 눌러 PC2의 전원이 켜지는 지 확인합니다.</li>
+    </ol>
+    <figure class="article-figure">
+      <img class="article-figure__img" src="/assets/image/g1-12.jpg">
     </figure>
-    <aside class="sidebox sidebox-caution">
-      <h3 class="font-bold">유선 네트워크 카드의 명칭 확인 방법</h3>
-      <ol>
-        <li>윈도우키 + R 키를 누릅니다.</li>
-        <li>실행창에 CMD 를 입력하고 확인키를 눌러 명령 프롬프트를 실행시킵니다.</li>
-        <li>프롬프트상에서 ipconfig /all 을 입력합니다</li>
-        <li><strong>이더넷 어댑터</strong>의 설명에 표시되는 유선 네트워크 카드의 명칭을 확인합니다.</li>
-      </ol>
-    </aside>
-  </section>
-
-  <section class="mb-30">
-    <h2 class="article__subtitle">3.3 장치관리자 열기</h2>
-    <p>
-      속성창의 '고급'탭을 클릭하고 속성의 WOL 항목이 활성화(Enabled) 인지 확인합니다.
-      (제조사에 따라 설정항목이 다르니 상세한 사항은 제조사에 문의하시기 바랍니다.)
-    </p>
-    <figure>
-      <img src="{{ assets_img + "g1-10.jpg" }}">
-    </figure>
-  </section>
-
-  <section>
-    <h2 class="article__subtitle">3.4 전원 관리 활성화</h2>
-    <p>PC가 절전 또는 휴면 모드에서 깨어나게 하기 위해서는 아래의 항목을 체크합니다.</p>
-    <figure>
-      <img src="{{ assets_img + "g1-11.jpg" }}">
-    </figure>
-    <aside class="sidebox sidebox-caution">
-      윈도우8 이후의 전원 설정에서 "빠른 시작"이 활성화되어 있으면 윈도우 전원이 완전히 꺼지지 않아 WOL 기능을 사용할 수 없는 경우가 있습니다. "빠른 시작" 기능을 해제하시기 바랍니다.<br>
-      <a target="_blank" href="https://support.microsoft.com/ko-kr/help/2776718/-wake-on-lan-wol-behavior-in-windows-8--windows-8-1-and-windows-10">https://support.microsoft.com/ko-kr/help/2776718/-wake-on-lan-wol-behavior-in-windows-8--windows-8-1-and-windows-1011114</a>
-    </aside>
-    <aside class="sidebox sidebox-caution">
-      윈도우10의 경우, 기본 설치된 네트워크 어댑터 드라이버가 WOL 기능을 지원하지 않는 경우가 있습니다. 제조사의 최신 드라이버를 설치한 후 WOL 기능 여부를 확인하시기 바랍니다.
-    </aside>
-  </section>
-</article>
-
-<article class="article" id="sec4">
-  <h1 class="article__title">4. PC2의 MAC 주소 확인</h1>
-  <p>동일한 네트워크에 연결된 다수의 PC 중에서 특정한 PC의 전원을 켜기 위해서는 그 PC의 고유 주소(MAC 주소)를 알아야 합니다.</p>
-  <ol class="mb-30">
-    <li>윈도우키 + R 키를 누릅니다.</li>
-    <li>실행창에 CMD 를 입력하고 확인키를 눌러 명령 프롬프트를 실행시킵니다.</li>
-    <li>프롬프트상에서 ipconfig /all 을 입력합니다</li>
-    <li>이더넷 어댑터의 물리적 주소를 확인하고 메모합니다.</li>
-    <li>PC를 종료(또는 절전모드로 변경)하여 테스트 준비를 합니다.</li>
-  </ol>
-  <figure>
-    <img src="{{ assets_img + "g1-12.jpg" }}">
-  </figure>
-</article>
-
-<article class="article" id="sec5">
-  <h1 class="article__title">5. PC2가 켜지는지 테스트하기</h1>
-  <p>WOL 기능 테스트 프로그램을 이용하여 PC2가 켜지는지 테스트합니다.</p>
-  <ol class="mb-30">
-    <li>PC1에서 <a target="_blank" href="/contents/files/WOLCheckTool.exe">WOL 기능 테스트 프로그램</a>을 다운받고 실행시킵니다.</li>
-    <li>메모해 둔 <strong>PC2의 MAC 주소</strong>를 입력합니다.</li>
-    <li><strong>전원 켜기 테스트</strong> 버튼을 눌러 PC2의 전원이 켜지는 지 확인합니다.</li>
-  </ol>
-  <figure class="leading-zero">
-    <img src="{{ assets_img + "g1-12.jpg" }}">
-  </figure>
-</article>
-@endsection
+  </article>
+  @endslot
+@endcomponent
