@@ -60,19 +60,16 @@
 }
 
 .body{
-  &__inner{
-    display: flex;
-  }
-
   &__sidebar{
+    position: fixed;
     width: 220px;
-    margin-right: 40px;
   }
 
   &__content{
     min-height: calc(100vh - (125px + 110px + 100px)); // (header+margin) + footer + (body margin)
     margin-bottom: 100px;
-    flex:1 700px; width: 700px;
+    margin-left: 260px;
+    width: 700px;
     box-sizing: border-box;
     padding-left: 40px;
     border-left: 1px solid #ccc;

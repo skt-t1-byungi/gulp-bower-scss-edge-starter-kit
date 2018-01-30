@@ -33,8 +33,7 @@
       /**
        * $(..).val(), $(..).serialize() 할 경우 값을 추가하기 위한 용도의 select element
        */
-      var $select = createSelectEl(name, values)
-        .appendTo($customSelect).val(selectedValue);
+      var $select = createSelectEl(name, values).appendTo($customSelect).val(selectedValue);
 
       // events
       $customSelect.click(function (e) {
@@ -105,7 +104,7 @@
   };
 
   function createSelectEl (name, values) {
-    return $('<select></select>', {name: name})
+    return $(document.createElement('select'), {name: name})
       .html(
         values.map(function (value) {
           return '<option value="' + value + '">' + value + '</option>';

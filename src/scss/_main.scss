@@ -75,8 +75,7 @@
   flex-wrap: wrap;
 
   &__link{
-    flex: 1 1;
-    flex-basis: calc(50% - 5px); // for ie
+    width: calc(50% - 5px); // for ie10
     padding-bottom: 10px;
 
     &:nth-child(odd){
