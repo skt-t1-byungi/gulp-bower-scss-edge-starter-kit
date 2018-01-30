@@ -5,20 +5,24 @@
   color: #4c4c4c;
   line-height: 2em;
   word-break: break-all;
-  margin-bottom: 80px;
+  margin-bottom: 80px; // if more complexes, converts to element
 
   &:last-child{
     margin-bottom: 0;
   }
 
   &__title{
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     color: #404040;
     border-bottom: 1px solid #d8d8d8;
     line-height: 1em;
     padding-bottom: 12px;
     margin-bottom: 20px;
+
+    &--lg{
+      font-size: 32px;
+    }
   }
 
   &__subtitle{
@@ -99,7 +103,6 @@
   background: white url(assets-img('download.png')) no-repeat;
   background-position: calc(100% - 20px) center; // for ie
   box-shadow: 1px 1px 1px #eee;
-
 
   &:hover{
     color: $active;

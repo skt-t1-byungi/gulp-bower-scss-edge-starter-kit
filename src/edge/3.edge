@@ -1,7 +1,7 @@
 @component('_layout', {pageId:'guid-3'})
   @slot('content')
     <article class="article">
-      <h1 class="article__title">WOL 장비에 접속하기 (고정IP환경)</h1>
+      <h1 class="article__title article__title--lg">WOL 장비에 접속하기 (고정IP환경)</h1>
       <ol class="contents-table mb-30">
         <li class="contents-table__item"><a class="contents-table__link" href="#section1">WOL 장비 접속 준비</a></li>
         <li class="contents-table__item"><a class="contents-table__link" href="#section2">설정 PC를 DHCP 환경으로 설정하기</a></li>
@@ -24,10 +24,10 @@
     <article class="article" id="section1">
       <h1 class="article__title">1. WOL 장비 접속 준비</h1>
       <p>
-        고정 IP의 네트워크 환경에서 WOL 장비를 운용하는 경우, WOL 장비에 고정 IP 정보를 입력해야 합니다.
+        고정 IP의 네트워크 환경에서 WOL 장비를 운용하는 경우, WOL 장비에 고정 IP 정보를 입력해야 합니다.<br>
         WOL 장비에 접속하기 위해서는 다음을 확인해 주세요.
       </p>
-      <ol class="mb-30">
+      <ol>
         <li>DHCP 상태의 PC (이하 설정 PC)</li>
         <li>WOL 장비</li>
         <li>LAN 케이블</li>
@@ -36,44 +36,40 @@
 
     <article class="article" id="section2">
       <h1 class="article__title">2. 설정 PC를 DHCP 환경으로 설정하기</h1>
-      <p>
-        고정 IP의 네트워크 환경에서 WOL 장비를 운용하는 경우, WOL 장비에 고정 IP 정보를 입력해야 합니다.
-        WOL 장비에 접속하기 위해서는 다음을 확인해 주세요.
-      </p>
       <aside class="sidebox sidebox--caution">
         고정 IP 설정의 PC를 이용하여 WOL 장비에 접속하기 위해서는 설정 PC의 네트워크 환경을 DHCP 환경으로 설정해야 합니다.
         이 경우, 원래 설정으로 돌아갈 수 있도록 기존의 IP 환경을 메모해두시기 바랍니다.
       </aside>
-      <ol class="mb-30">
+      <ol>
         <li>win + R키를 눌러 실행창을 엽니다</li>
         <li>
           'ncpa.cpl' 을 입력하고 확인 버튼을 클릭하여 네트워크 연결창을 엽니다.
-          <figure class="article-figure">
-            <img class="article-figure__img" src="/assets/image/g3-01.jpg">
+          <figure class="article-figure mb-20">
+            <img class="article-figure__img" src="/assets/image/g3-01.jpg" alt="guide image 01">
           </figure>
         </li>
         <li>
           이더넷 아이콘에서 마우스 오른쪽 클릭하여 속성을 선택합니다.
-          <figure class="article-figure">
-            <img class="article-figure__img" src="/assets/image/g3-02.jpg">
+          <figure class="article-figure mb-20">
+            <img class="article-figure__img" src="/assets/image/g3-02.jpg" alt="guide image 02">
           </figure>
         </li>
         <li>
           인터넷 프로토콜 버전4(TCP/IPv4) 를 더블클릭합니다.
-          <figure class="article-figure">
-            <img class="article-figure__img" src="/assets/image/g3-03.jpg">
+          <figure class="article-figure mb-20">
+            <img class="article-figure__img" src="/assets/image/g3-03.jpg" alt="guide image 03">
           </figure>
         </li>
         <li>
           기존 IP 환경을 메모해둡니다.
-          <figure class="article-figure">
-            <img class="article-figure__img" src="/assets/image/g3-04.jpg">
+          <figure class="article-figure mb-20">
+            <img class="article-figure__img" src="/assets/image/g3-04.jpg" alt="guide image 04">
           </figure>
         </li>
         <li>
           일반'탭의 '자동으로 IP 주소 받기', '자동으로 DNS 서버 주소 받기'를 선택하고 확인 버튼을 클릭하여 설정 PC의 네트워크 상태를 DHCP 상태로 설정합니다.
           <figure class="article-figure">
-            <img class="article-figure__img" src="/assets/image/g3-05.jpg">
+            <img class="article-figure__img" src="/assets/image/g3-05.jpg" alt="guide image 05">
           </figure>
         </li>
       </ol>
@@ -86,26 +82,26 @@
         <li>동봉된 LAN케이블을 설정 PC의 LAN 포트와 WOL 장비의 SETTING 포트(구 기기의 경우 LAN 포트)에 연결합니다.</li>
       </ol>
       <figure class="article-figure">
-        <img class="article-figure__img" src="/assets/image/g3-06.jpg">
+        <img class="article-figure__img" src="/assets/image/g3-06.jpg" alt="guide image 06">
       </figure>
-      <aside class="sidebox sidebox--caution">
-        네트워크가 DHCP 환경인 경우, 3장 WOL 장비에 접속하기 (DHCP 환경)을 확인하세요.
+      <aside class="sidebox sidebox--warn">
+        반드시 LAN케이블을 WOL 장비의 WAN이 아닌 SETTING(구 기기의 경우 LAN)포트에 연결하시기 바랍니다.
       </aside>
     </article>
 
     <article class="article" id="section4">
       <h1 class="article__title">4. WOL 장치에 접속하기</h1>
+      <p>PC의 웹브라우저를 기동시키고 주소창에 10.10.10.1 을 입력하여 WOL 장비에 접속합니다.</p>
       <figure class="article-figure">
-        <figcaption>PC의 웹브라우저를 기동시키고 주소창에 10.10.10.1 을 입력하여 WOL 장비에 접속합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g3-07.jpg">
+        <img class="article-figure__img" src="/assets/image/g3-07.jpg" alt="guide image 07">
       </figure>
     </article>
 
     <article class="article" id="section5">
       <h1 class="article__title">5. 네트워크 환경 등록하기</h1>
+      <p>WOL 장비에 접속하여 기기명, 네트워크 환경을 등록합니다.</p>
       <figure class="article-figure">
-        <figcaption>WOL 장비에 접속하여 기기명, 네트워크 환경을 등록합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g3-08.jpg">
+        <img class="article-figure__img" src="/assets/image/g3-08.jpg" alt="guide image 08">
       </figure>
       <aside class="sidebox sidebox--caution">
         <ul>
@@ -118,23 +114,23 @@
 
     <article class="article" id="section6">
       <h1 class="article__title">6. 관리자 계정 입력하기</h1>
+      <p>WOL 장비에 접근할 수 있는 계정을 설정합니다.</p>
       <figure class="article-figure">
-        <figcaption>WOL 장비에 접근할 수 있는 계정을 설정합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g3-09.jpg">
+        <img class="article-figure__img" src="/assets/image/g3-09.jpg" alt="guide image 09">
       </figure>
     </article>
 
     <article class="article" id="section7">
       <h1 class="article__title">7. 입력한 정보 저장하기</h1>
+      <p>'다음으로' 버튼을 클릭하여 입력한 정보를 확인한 후 기기에 저장합니다.</p>
       <figure class="article-figure">
-        <figcaption>'다음으로' 버튼을 클릭하여 입력한 정보를 확인한 후 기기에 저장합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g3-10.jpg">
-        <img class="article-figure__img" src="/assets/image/g3-11.jpg">
+        <img class="article-figure__img" src="/assets/image/g3-10.jpg" alt="guide image 10">
+        <img class="article-figure__img" src="/assets/image/g3-11.jpg" alt="guide image 11">
       </figure>
     </article>
 
     <article class="article" id="section8">
-      <section>
+      <section class="mb-50">
         <h1 class="article__title">8. RemoteView에 WOL 장비 등록하기</h1>
         <p>
           Remoteview를 이용하면 원활한 WOL 서비스를 이용할 수 있습니다.
@@ -144,43 +140,43 @@
 
       <section class="mb-50">
         <h2 class="article__subtitle">8.1 WOL 장비를 네트워크에 접속하기</h2>
+        <p>WOL 박스를 공유기(또는 허브)에 연결하여 네트워크(인터넷이 가능한 환경)에 접속합니다.</p>
         <figure class="article-figure">
-          <figcaption>WOL 박스를 공유기(또는 허브)에 연결하여 네트워크(인터넷이 가능한 환경)에 접속합니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g3-12.jpg">
+          <img class="article-figure__img" src="/assets/image/g3-12.jpg" alt="guide image 12">
         </figure>
-        <aside class="sidebox sidebox--caution">
-          반드시 LAN케이블을 WOL 박스의 WAN 포트에 연결해야만 합니다.
+        <aside class="sidebox sidebox--warn">
+          반드시 LAN케이블을 WOL 박스의 <b>WAN 포트</b>에 연결해야만 합니다.
         </aside>
       </section>
 
       <section class="mb-50">
         <h2 class="article__subtitle">8.2 WOL 장비에 로그인</h2>
+        <p>
+          설정PC 웹브라우저 주소창에 WOL 장비의 <a href="#section5">고정 IP 주소</a>를 입력하여 WOL 장비에 접속하고
+          <a href="#section6">관리자 계정</a>을 입력하여 로그인합니다.
+        </p>
         <figure class="article-figure">
-          <figcaption>
-            설정PC 웹브라우저 주소창에 WOL 장비의 <a href="#section5">고정 IP 주소</a>를 입력하여 WOL 장비에 접속하고
-            <a href="#section6">관리자 계정</a>을 입력하여 로그인합니다.
-          </figcaption>
-          <img class="article-figure__img" src="/assets/image/g3-13.jpg">
+          <img class="article-figure__img" src="/assets/image/g3-13.jpg" alt="guide image 13">
         </figure>
       </section>
 
       <section class="mb-50">
         <h2 class="article__subtitle">8.3 remoteview 서비스에 로그인</h2>
+        <p>초기화면의 '리모트뷰 설정'을 클릭한 후 'Agent 등록' 버튼을 누르고 remoteview 계정을 입력하여 remoteview 서비스에 로그인합니다.</p>
         <figure class="article-figure">
-          <figcaption>초기화면의 '리모트뷰 설정'을 클릭한 후 'Agent 등록' 버튼을 누르고 remoteview 계정을 입력하여 remoteview 서비스에 로그인합니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g3-14.jpg">
+          <img class="article-figure__img" src="/assets/image/g3-14.jpg" alt="guide image 14">
         </figure>
       </section>
 
       <section>
         <h2 class="article__subtitle">8.4 remoteview 에이전트 등록</h2>
-        <figure class="article-figure">
-          <figcaption>remoteview에서 WOL 서비스를 사용하기 위해서 WOL 기기를 에이전트로 등록합니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g3-15.jpg">
+        <p>remoteview에서 WOL 서비스를 사용하기 위해서 WOL 기기를 에이전트로 등록합니다.</p>
+        <figure class="article-figure mb-30">
+          <img class="article-figure__img" src="/assets/image/g3-15.jpg" alt="guide image 15">
         </figure>
+        <p>등록이 완료되면 등록정보가 표시됩니다.</p>
         <figure class="article-figure">
-          <figcaption>등록이 완료되면 등록정보가 표시됩니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g3-16.jpg">
+          <img class="article-figure__img" src="/assets/image/g3-16.jpg" alt="guide image 16">
         </figure>
       </section>
     </article>

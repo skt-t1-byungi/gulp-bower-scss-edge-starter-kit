@@ -70,7 +70,7 @@
   }
 
   &__content{
-    min-height: calc(100vh - (125px + 110px + 100px + 10px)); // (header+margin) + footer + (body margin + padding)
+    min-height: calc(100vh - (125px + 110px + 100px)); // (header+margin) + footer + (body margin)
     margin-bottom: 100px;
     flex:1 700px; width: 700px;
     box-sizing: border-box;

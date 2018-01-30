@@ -173,6 +173,7 @@ gulp.task('build:html', ['edge'], () => {
     .src(path.join(paths.DEV_HTML, '**/*.html'))
     .pipe($.jsbeautifier())
     .pipe($.size({showFiles: true}))
+    .pipe($.htmlBeautify())
     .pipe(gulp.dest(paths.DIST_HTML));
 });
 

@@ -1,7 +1,7 @@
 @component('_layout', {pageId:'guid-2'})
   @slot('content')
     <article class="article">
-      <h1 class="article__title">WOL 장비에 접속하기 (DHCP 환경)</h1>
+      <h1 class="article__title article__title--lg">WOL 장비에 접속하기 (DHCP 환경)</h1>
       <ol class="contents-table mb-30">
         <li class="contents-table__item"><a class="contents-table__link" href="#section1">WOL 장비 연결하기</a></li>
         <li class="contents-table__item"><a class="contents-table__link" href="#section2">WOL 장비에 접속하기</a></li>
@@ -26,9 +26,9 @@
         <li>동봉된 LAN케이블을 공유기(또는 허브)의 여분의 포트와 WOL 장비의 WAN 포트에 연결합니다.</li>
       </ol>
       <figure class="mb-30 article-figure">
-        <img class="article-figure__img" src="/assets/image/g2-01.jpg">
+        <img class="article-figure__img" src="/assets/image/g2-01.jpg" alt="guide image 01">
       </figure>
-      <aside class="sidebox sidebox--caution">
+      <aside class="sidebox sidebox--warn">
         반드시 LAN케이블을 WOL 장비의 SETTING이 아닌 WAN 포트에 연결하시기 바랍니다.
       </aside>
     </article>
@@ -36,47 +36,66 @@
     <article class="article" id="section2">
       <h1 class="article__title">2. WOL 장비에 접속하기</h1>
       <p>
-        WOL 장비에 접속하기 위해서는 WOL 장비의 IP 주소를 알아야 합니다.
-        아래의 공란에 WOL 기기의 MAC 어드레스를 입력한 후 '검색' 버튼을 누릅니다.
+        WOL 장비에 접속하기 위해서는 WOL 장비의 IP 주소를 알아야 합니다.<br>
+        아래의 공란에 WOL 기기의 MAC 어드레스를 입력한 후 '검색' 버튼을 누릅니다.<br>
         검색결과가 표시되면 '접속'버튼을 눌러 WOL 장비에 접속합니다. (새 탭 또는 새창이 뜹니다)
       </p>
+      <div class="wol-finder">
+        <form class="wol-finder__form">
+          <label class="wol-finder__label">
+            <span class="wol-finder__txt">접속 번호</span>
+            <input type="search" class="wol-finder__input" value="08-10-77-7D-6C-8C">
+          </label>
+          <button class="wol-finder__submit btn" type="submit">찾기</button>
+        </form>
+        <p class="wol-finder__invalid-desc">Mac 주소를 입력해주세요</p>
+        <p class="wol-finder__ex">ex) 08-10-77-7D-6C-8C</p>
+      </div>
+
+      <div class="wol-finder wol-finder--hide">
+        <form class="wol-finder__form">
+          <label class="wol-finder__label">
+            <span class="wol-finder__txt">검색 결과</span>
+            <input type="search" class="wol-finder__input" value="123.456.56.8" disabled>
+          </label>
+          <button class="wol-finder__submit btn" type="submit">접속하기</button>
+        </form>
+      </div>
       <aside class="sidebox sidebox--caution">
         <p class="mb-10">
           장비 아래면에 붙어있는 스티커에 MAC 어드레스가 기재되어 있습니다.<br>
           12자리의 숫자와 문자를 확인하여 입력하시기 바랍니다.
         </p>
         <figure class="article-figure">
-          <img class="article-figure__img" src="/assets/image/g2-03.jpg">
+          <img class="article-figure__img" src="/assets/image/g2-03.jpg" alt="guide image 03">
         </figure>
       </aside>
     </article>
 
     <article class="article" id="section3">
       <h1 class="article__title">3. 네트워크 환경 확인하기</h1>
+      <p>WOL 장비에 접속되어 새 창이 뜨면 WOL 장비명을 입력한 후, 네트워크 환경이 DHCP 상태인지 확인합니다.</p>
       <figure class="article-figure">
-        <figcaption>
-          WOL 장비에 접속되어 새 창이 뜨면 WOL 장비명을 입력한 후, 네트워크 환경이 DHCP 상태인지 확인합니다.
-        </figcaption>
-        <img class="article-figure__img" src="/assets/image/g2-05.jpg">
+        <img class="article-figure__img" src="/assets/image/g2-05.jpg" alt="guide image 05">
       </figure>
     </article>
 
     <article class="article" id="section4">
       <h1 class="article__title">4. 관리자 계정 입력하기</h1>
+      <p>WOL 장비에 접근할 수 있는 계정을 설정합니다.</p>
       <figure class="article-figure">
-        <figcaption>WOL 장비에 접근할 수 있는 계정을 설정합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g2-06.jpg">
+        <img class="article-figure__img" src="/assets/image/g2-06.jpg" alt="guide image 06">
       </figure>
     </article>
 
     <article class="article" id="section5">
       <h1 class="article__title">5. 관리자 계정 입력하기</h1>
+      <p>'다음으로' 버튼을 클릭하여 입력한 정보를 확인한 후 기기에 환경을 저장합니다.</p>
       <figure class="article-figure">
-        <figcaption>'다음으로' 버튼을 클릭하여 입력한 정보를 확인한 후 기기에 환경을 저장합니다.</figcaption>
-        <img class="article-figure__img" src="/assets/image/g2-07.jpg">
+        <img class="article-figure__img" src="/assets/image/g2-07.jpg" alt="guide image 07">
       </figure>
       <figure class="article-figure">
-        <img class="article-figure__img" src="/assets/image/g2-08.jpg">
+        <img class="article-figure__img" src="/assets/image/g2-08.jpg" alt="guide image 08">
       </figure>
     </article>
 
@@ -91,32 +110,32 @@
 
       <section class="mb-50">
         <h2 class="article__subtitle">6.1 WOL 장비에 로그인</h2>
+        <p>설정한 관리자 계정으로 장비에 로그인합니다.</p>
         <figure class="article-figure">
-          <figcaption>설정한 관리자 계정으로 장비에 로그인합니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g2-09.jpg">
+          <img class="article-figure__img" src="/assets/image/g2-09.jpg" alt="guide image 09">
         </figure>
       </section>
 
       <section class="mb-50">
         <h2 class="article__subtitle">6.2 remoteview 서비스에 로그인</h2>
+        <p>
+          초기화면의 '리모트뷰 설정'을 클릭한 후 'Agent 등록' 버튼을 누르고
+          remoteview 계정을 입력하여 remoteview 서비스에 로그인합니다.
+        </p>
         <figure class="article-figure">
-          <figcaption>
-            초기화면의 '리모트뷰 설정'을 클릭한 후 'Agent 등록' 버튼을 누르고
-            remoteview 계정을 입력하여 remoteview 서비스에 로그인합니다.
-          </figcaption>
-          <img class="article-figure__img" src="/assets/image/g2-10.jpg">
+          <img class="article-figure__img" src="/assets/image/g2-10.jpg" alt="guide image 10">
         </figure>
       </section>
 
       <section>
         <h2 class="article__subtitle">6.3 remoteview 에이전트 등록</h2>
-        <figure class="article-figure">
-          <figcaption>remoteview에서 WOL 서비스를 사용하기 위해서 WOL 기기를 에이전트로 등록합니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g2-11.jpg">
+        <p>remoteview에서 WOL 서비스를 사용하기 위해서 WOL 기기를 에이전트로 등록합니다.</p>
+        <figure class="article-figure mb-30">
+          <img class="article-figure__img" src="/assets/image/g2-11.jpg" alt="guide image 11">
         </figure>
+        <p>등록이 완료되면 등록정보가 표시됩니다.</p>
         <figure class="article-figure">
-          <figcaption>등록이 완료되면 등록정보가 표시됩니다.</figcaption>
-          <img class="article-figure__img" src="/assets/image/g2-12.jpg">
+          <img class="article-figure__img" src="/assets/image/g2-12.jpg" alt="guide image 12">
         </figure>
       </section>
     </article>

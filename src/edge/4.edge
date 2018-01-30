@@ -1,5 +1,67 @@
 @component('_layout', {pageId:'guid-4'})
   @slot('content')
+    <article class="article">
+      <h1 class="article__title article__title--lg">PC의 전원을 켜서 원격 제어하기</h1>
+      <ol class="contents-table mb-30">
+        <li class="contents-table__item"><a class="contents-table__link" href="#section1">RemoteView 서비스 접속</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section2">PC 전원 켜기</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section3">PC 전원 상태 확인</a></li>
+        <li class="contents-table__item"><a class="contents-table__link" href="#section4">PC 원격 제어하기</a></li>
+      </ol>
+      <aside class="sidebox sidebox--caution">
+        원격제어를 할 PC에 미리 remoteview 에이전트를 설치하여야 합니다.
+      </aside>
+    </article>
 
+    <article class="article" id="section1">
+      <h1 class="article__title">1. RemoteView 서비스 접속</h1>
+      <p>
+        <a href="https://biz.rview.com/ja/" target="_blank">RemoteView</a>에 로그인하여
+        WOL 기기가 제대로 등록되고 전원이 들어와 있는지 확인합니다.
+      </p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g4-01.jpg" alt="guide image 01">
+      </figure>
+    </article>
+
+    <article class="article" id="section2">
+      <h1 class="article__title">2. PC 전원 켜기</h1>
+      <p>전원을 켤 PC 아이콘에서 마우스 오른쪽 클릭을 한 후 <b>"WOL로 전원켜기"</b>를 클릭합니다.</p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g4-02.jpg" alt="guide image 02">
+      </figure>
+      <aside class="sidebox sidebox--caution">
+        전원을 켤 PC는 WOL 기기와 동일한 네트워크에 있어야 합니다.
+      </aside>
+    </article>
+
+    <article class="article" id="section3">
+      <h1 class="article__title">3. PC 전원 상태 확인</h1>
+      <p>
+        전원이 켜지기 까지는 10분 이내의 시간이 필요합니다.
+        PC에 전원이 켜지고 사용 가능한 상태가 되면 PC의 아이콘이 ON 상태로 바뀝니다.
+      </p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g4-03.jpg" alt="guide image 03">
+      </figure>
+    </article>
+
+    <article class="article" id="section4">
+      <h1 class="article__title">4. PC 원격 제어하기</h1>
+      <p>전원이 켜진 PC 아이콘을 더블클릭하여 원격제어를 시작합니다.</p>
+      <figure class="article-figure">
+        <img class="article-figure__img" src="/assets/image/g4-04.jpg" alt="guide image 04">
+      </figure>
+      <aside class="sidebox sidebox--caution mb-0">
+        <h2 class="font-bold">다수의 PC를 일괄 켜기</h2>
+        <p>
+          동일한 네트워크상의 다수의 PC를 한꺼번에 켜기 위해서는
+          WOL 기기 아이콘을 마우스 오른쪽 클릭한 후 "일괄 켜기"를 클릭합니다.
+        </p>
+        <figure class="article-figure">
+          <img class="article-figure__img" src="/assets/image/g4-05.jpg" alt="guide image 05">
+        </figure>
+      </aside>
+    </article>
   @endslot
 @endcomponent

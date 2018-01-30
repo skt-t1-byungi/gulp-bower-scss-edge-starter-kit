@@ -3,7 +3,7 @@
 //noinspection CssUnknownTarget
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-html, body{
+html, body, input{
   font-family: meiryo, 'Nanum Gothic', 'dotum', sans-serif;
   font-size: $font-default-size;
   text-size-adjust: none;
@@ -12,6 +12,7 @@ html, body{
 a{
   text-decoration: none;
   color: $color-txt-highlight;
+
   &:hover{
     color: #3d79e6;
     transition: 0.3s color;
@@ -19,7 +20,8 @@ a{
 }
 
 ol{
-  list-style: decimal inside;
+  list-style: decimal;
+  padding-left: 20px;
 }
 p{
   margin-bottom: 30px;
@@ -28,10 +30,11 @@ p{
 figure{
 }
 
-strong{
+b, strong{
   font-weight: 900;
 }
 
 [hidden]{
   display: none!important;
 }
+

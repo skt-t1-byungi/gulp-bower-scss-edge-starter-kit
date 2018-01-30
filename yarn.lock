@@ -2632,6 +2632,14 @@ gulp-edgejs@^0.1.0:
     replace-ext "^1.0.0"
     through2 "^2.0.3"
 
+gulp-html-beautify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-html-beautify/-/gulp-html-beautify-1.0.1.tgz#2834c6f77669605726eee55e3205f63074b7a152"
+  dependencies:
+    js-beautify "^1.5.10"
+    rcloader "^0.1.4"
+    through2 "^2.0.0"
+
 gulp-if@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/gulp-if/-/gulp-if-2.0.2.tgz#a497b7e7573005041caa2bc8b7dda3c80444d629"
@@ -3547,7 +3555,7 @@ js-base64@^2.1.8:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.1.tgz#e02813181cd53002888e918935467acb2910e596"
 
-js-beautify@^1.7.5:
+js-beautify@^1.5.10, js-beautify@^1.7.5:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.7.5.tgz#69d9651ef60dbb649f65527b53674950138a7919"
   dependencies:
@@ -3853,7 +3861,7 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
-lodash@3.10.x, lodash@^3.10.1:
+lodash@3.10.x, lodash@^3.0.1, lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -4935,6 +4943,19 @@ rc@^1.1.2, rc@^1.1.7, rc@^1.2.2:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+rcfinder@^0.1.6:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/rcfinder/-/rcfinder-0.1.9.tgz#f3e80f387ddf9ae80ae30a4100329642eae81115"
+  dependencies:
+    lodash.clonedeep "^4.3.2"
+
+rcloader@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/rcloader/-/rcloader-0.1.4.tgz#d0c902f0444983a2ee5a6907937c6a79ca704509"
+  dependencies:
+    lodash "^3.0.1"
+    rcfinder "^0.1.6"
 
 read-all-stream@^3.0.0:
   version "3.1.0"

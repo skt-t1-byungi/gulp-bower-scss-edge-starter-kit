@@ -1,0 +1,72 @@
+.wol-finder{
+  width: 425px;
+  line-height: 1.5em;
+
+  &__form{
+    display: flex;
+    background: #5975af;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 5px;
+  }
+
+  &__label{
+    flex:1;
+  }
+
+  &__txt{
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  &__input{
+    appearance: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 9px 10px;
+    color: #4c4c4c;
+    border-radius: 5px;
+    width: calc(100% - 70px);
+
+    &--valid{
+      border-color: #2ae8bd;
+    }
+
+    &--invalid{
+      border-color: #ef4a74;
+    }
+
+    &[disabled]{
+      color: #2d63c6;
+      background: #d7e4ff;
+    }
+  }
+
+  &__submit{
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    height: 35px; line-height: 35px;
+  }
+
+  $etc-text-indent: 90px;
+  &__invalid-desc{
+    color: #ef4a74;
+    font-size: 12px;
+    margin: 0;
+    text-indent: $etc-text-indent;
+  }
+
+  &__ex{
+    color: #8a8a8a;
+    margin-bottom: 10px;
+    text-indent: $etc-text-indent;
+  }
+
+  &--hide{
+    height: 0;
+    overflow: hidden;
+  }
+}
